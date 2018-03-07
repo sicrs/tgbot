@@ -251,7 +251,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     else:
         if user.id in SUDO_USERS:
             text += "\nThis person is one of my sudo users! " \
-                    "Nearly as powerful as my owner - so watch it."
+                    "Nearly as powerful as my owner - so easy does it."
         else:
             if user.id in SUPPORT_USERS:
                 text += "\nThis person is one of my support users! " \
