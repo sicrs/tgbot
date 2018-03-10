@@ -7,7 +7,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHa
 
 @run_async
 def nou(bot: Bot, update: Update):
-    update.effective_mesage.reply_text("NoNoU")
+    update.effective_message.reply_text("NoNoU")
 
 __help__ = """
  - /nou: says NoU
