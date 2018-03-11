@@ -22,4 +22,7 @@ __help__ = """
 __mod_name__ = "NoU"
 
 NOU_HANDLER = DisableAbleCommandHandler("nou", nou)
+VINCENT_HANDLER = DisableAbleCommandHandler("vincent", vincent)
+
 dispatcher.add_handler(NOU_HANDLER)
+dispatcher.add_handler(VINCENT_HANDLER)
