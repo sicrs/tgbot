@@ -7,7 +7,13 @@ from tg_bot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHa
 
 @run_async
 def nou(bot: Bot, update: Update):
-    update.effective_message.reply_text("NoNoU")
+    msg = update.effective_message
+    reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
+    reply_text("NoNoU")
+
+@run_async
+def vincent(bot: Bot, update: Update):
+    update.effective_message.reply_text("Fuck u, Vincent")
 
 __help__ = """
  - /nou: says NoU
