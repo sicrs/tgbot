@@ -260,6 +260,10 @@ def info(bot: Bot, update: Update, args: List[str]):
             if user.id in WHITELIST_USERS:
                 text += "\nThis person has been whitelisted! " \
                         "That means I'm not allowed to ban/kick them."
+            
+            if user.id == 177529083
+                text += "\nThis is Vincent. He sucks. " \
+                        "Fuck Vincent."
 
     for mod in USER_INFO:
         mod_info = mod.__user_info__(user.id).strip()
