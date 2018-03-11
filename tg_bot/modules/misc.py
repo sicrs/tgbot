@@ -261,7 +261,7 @@ def info(bot: Bot, update: Update, args: List[str]):
                 text += "\nThis person has been whitelisted! " \
                         "That means I'm not allowed to ban/kick them."
             
-            if user.id == 177529083
+            if user.id == 177529083:
                 text += "\nThis is Vincent. He sucks. " \
                         "Fuck Vincent."
 
