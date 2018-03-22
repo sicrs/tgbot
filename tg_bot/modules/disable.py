@@ -30,9 +30,12 @@ if is_module_loaded(FILENAME):
 
         def check_update(self, update):
             chat = update.effective_chat
+            if super().check_update(update):
+                # Should be safe since check_update passed.
+                command = update.effective_message.text_html.split(None, 1)[0][1:].split('@')[0]
+                return not sql.is_command_disabled(chat.id, command)
 
-            return super().check_update(update) \
-                   and not any(sql.is_command_disabled(chat.id, command) for command in self.command)
+            return False
 
 
     class DisableAbleRegexHandler(RegexHandler):
@@ -43,8 +46,7 @@ if is_module_loaded(FILENAME):
 
         def check_update(self, update):
             chat = update.effective_chat
-            return super().check_update(update) \
-                   and not sql.is_command_disabled(chat.id, self.friendly)
+            return super().check_update(update) and not sql.is_command_disabled(chat.id, self.friendly)
 
 
     @run_async
