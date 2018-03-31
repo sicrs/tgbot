@@ -9,7 +9,7 @@ from tg_bot.modules.helper_funcs.filters import CustomFilters
 
 from tg_bot import dispatcher
 
-@@run_async
+@run_async
 @bot_admin
 def getlink(bot: Bot, update: Update, args: List[int]):
     if args:
