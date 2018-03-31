@@ -9,14 +9,13 @@ from tg_bot.modules.helper_funcs.filters import CustomFilters
 
 from tg_bot import dispatcher
 
-@run_async
+@@run_async
 @bot_admin
 def getlink(bot: Bot, update: Update, args: List[int]):
     if args:
         chat_id = int(args[0])
     else:
-        update.effective_message.reply_chat("You don't seem to be referring to a chat")
-
+        update.effective_message.reply_text("You don't seem to be referring to a chat")
     chat = bot.getChat(chat_id)
     bot_member = chat.get_member(bot.id)
     if bot_member.can_invite_users:
