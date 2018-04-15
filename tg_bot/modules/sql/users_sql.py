@@ -134,6 +134,7 @@ def rm_chat(chat_id):
     chat = SESSION.query(Chats).get(chat_id)
     if chat:
         SESSION.delete(chat)
+    SESSION.commit()
 
 
 def get_user_num_chats(user_id):
