@@ -5,6 +5,7 @@ from telegram.ext import MessageHandler, Filters, CommandHandler
 from telegram.ext.dispatcher import run_async
 from typing import List
 from tg_bot.modules.helper_funcs.filters import CustomFilters
+from tg_bot.modules.sql.users_sql import rm_chat
 
 import telegram
 from tg_bot import dispatcher
@@ -20,6 +21,7 @@ def leave(bot: Bot, update: Update, args: List[str]):
     try:
         bot.leaveChat(int(chat_id))
         update.effective_message.reply_text("Left the group successfully!")
+        rm_chat(int(chat_id))
     except telegram.TelegramError:
         update.effective_message.reply_text("Attempt failed.")
 

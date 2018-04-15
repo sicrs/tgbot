@@ -130,6 +130,11 @@ def get_all_chats():
     finally:
         SESSION.close()
 
+def rm_chat(chat_id):
+    chat = SESSION.query(Chats).get(chat_id)
+    if chat:
+        SESSION.delete(chat)
+
 
 def get_user_num_chats(user_id):
     try:
