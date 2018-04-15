@@ -4,7 +4,7 @@ from telegram import Message, Update, Bot, User
 from telegram import MessageEntity
 from telegram.ext import Filters, run_async
 
-from tgbot import dispatcher
+from tg_bot import dispatcher
 from tg_bot.modules.disable import DisableAbleCommandHandler
 
 @run_async
