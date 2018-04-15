@@ -11,8 +11,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 def tidy(bot: Bot, update: Update):
     message = update.effective_message
     reply_text = re.sub(r'Pls', "Please", message.reply_to_message.text)
-    message.reply_to_message_.reply_text(reply_text)
-
+    message.reply_to_message_
 TIDY_HANDLER = DisableAbleCommandHandler("tidy", tidy)
 
 dispatcher.add_handler(TIDY_HANDLER)
