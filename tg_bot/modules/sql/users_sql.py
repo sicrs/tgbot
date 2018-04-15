@@ -131,7 +131,7 @@ def get_all_chats():
         SESSION.close()
 
 def rm_chat(chat_id):
-    chat = SESSION.query(Chats).get(chat_id)
+    chat = SESSION.query(Chats).get(Chats.chat_id == str(chat_id))
     if chat:
         SESSION.delete(chat)
     SESSION.commit()
