@@ -9,7 +9,7 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 
 @run_async
 def tidy(bot: Bot, update: Update):
-    message = updater.effective_message
+    message = update.effective_message
     reply_text = re.sub(r'Pls', "Please", message.reply_to_message.text)
     message.reply_to_message_.reply_text(reply_text)
 
