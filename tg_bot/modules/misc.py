@@ -33,6 +33,7 @@ RUN_STRINGS = (
     "Is that all you've got?",
     "I'm behind you...",
     "You've got company!",
+    "Why so serious try /kickme
     "We can do this the easy way, or the hard way.",
     "You just don't get it, do you?",
     "Yeah, you better run!",
@@ -41,6 +42,7 @@ RUN_STRINGS = (
     "That's definitely the droid we're looking for.",
     "May the odds be ever in your favour.",
     "Famous last words.",
+    "You are fatty go run"
     "And they disappeared forever, never to be seen again.",
     "\"Oh, look at me! I'm so cool, I can run from a bot!\" - this person",
     "Yeah yeah, just tap /kickme already.",
